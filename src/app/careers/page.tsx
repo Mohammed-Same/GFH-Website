@@ -55,101 +55,124 @@ export default function CareersPage() {
 
   return (
     <section className="py-16 px-4 min-h-screen bg-white">
-      <div className="max-w-2xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-2 text-gray-900">Careers at GFH Telecom</h2>
-        <p className="text-center text-gray-600 mb-8">Apply to join our team! Please fill out the form below.</p>
-        <form className="bg-white rounded-2xl shadow-lg p-4 sm:p-8 flex flex-col gap-6 border border-gray-200 w-full" onSubmit={handleSubmit}>
-          <div className="flex flex-col md:flex-row gap-4">
-            <input
-              type="text"
-              name="firstName"
-              placeholder="First Name *"
-              className="flex-1 px-5 py-3 border border-gray-300 rounded-xl focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400"
-              value={form.firstName}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              name="lastName"
-              placeholder="Last Name *"
-              className="flex-1 px-5 py-3 border border-gray-300 rounded-xl focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400"
-              value={form.lastName}
-              onChange={handleChange}
-              required
-            />
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl font-extrabold text-center mb-4" style={{fontFamily: 'Inter, Arial, Helvetica, sans-serif'}}>Careers at GFH Telecom</h2>
+        <div className="flex justify-center mb-8">
+          <div className="bg-[#EAF4FF] border-l-4 border-[#0057D9] rounded-r-xl px-6 py-4 max-w-xl w-full shadow text-center">
+            <span className="text-xl font-semibold text-[#0057D9] flex items-center justify-center gap-2">
+              <span className="text-2xl">💼</span>
+              Join our growing team and help connect communities!
+            </span>
+            <div className="text-gray-600 text-sm mt-2">Explore open positions and start your career with a leading Total Wireless authorized retailer.</div>
           </div>
-          <input
-            type="email"
-            name="email"
-            placeholder="Email *"
-            className="px-5 py-3 border border-gray-300 rounded-xl focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400"
-            value={form.email}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="tel"
-            name="phone"
-            inputMode="numeric"
-            pattern="[0-9]*"
-            placeholder="Contact Number *"
-            className="px-5 py-3 border border-gray-300 rounded-xl focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400"
-            value={form.phone}
-            onChange={e => {
-              const val = e.target.value.replace(/[^0-9]/g, "");
-              handleChange({ target: { name: "phone", value: val } });
-            }}
-            minLength={7}
-            maxLength={15}
-          />
-          <input
-            type="text"
-            name="position"
-            placeholder="Position Applying For *"
-            className="px-5 py-3 border border-gray-300 rounded-xl focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400"
-            value={form.position}
-            onChange={handleChange}
-            required
-          />
-          <textarea
-            name="experience"
-            placeholder="Briefly describe your relevant experience *"
-            className="px-5 py-3 border border-gray-300 rounded-xl min-h-[80px] max-h-[200px] focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400 resize-vertical"
-            value={form.experience}
-            onChange={handleChange}
-            required
-          />
-          <textarea
-            name="coverLetter"
-            placeholder="Cover Letter (optional)"
-            className="px-5 py-3 border border-gray-300 rounded-xl min-h-[80px] max-h-[200px] focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400 resize-vertical"
-            value={form.coverLetter}
-            onChange={handleChange}
-          />
-          <textarea
-            name="whyGFH"
-            placeholder="Why do you want to work at GFH Telecom? *"
-            className="px-5 py-3 border border-gray-300 rounded-xl min-h-[80px] max-h-[200px] focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400 resize-vertical"
-            value={form.whyGFH}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="url"
-            name="resume"
-            placeholder="Link to Resume (Google Drive, Dropbox, etc.) *"
-            className="px-5 py-3 border border-gray-300 rounded-xl focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400"
-            value={form.resume}
-            onChange={handleChange}
-            required
-          />
-          {error && <div className="text-red-600 text-center font-semibold mt-2">{error}</div>}
-          {success && <div className="text-green-600 text-center font-semibold mt-2">Application submitted successfully!</div>}
-          <button type="submit" className="px-8 py-3 bg-[#ff8200] text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-lg" disabled={submitting}>
-            {submitting ? "Submitting..." : "Submit Application"}
-          </button>
-        </form>
+        </div>
+        <div className="bg-white rounded-xl shadow p-8 flex flex-col items-center border border-gray-100 mb-10">
+          <h3 className="text-2xl font-bold mb-2 text-[#0057D9]">Why Work With Us?</h3>
+          <ul className="list-disc text-gray-700 text-left mb-6 pl-6">
+            <li>Supportive, growth-focused team environment</li>
+            <li>Opportunities for advancement and training</li>
+            <li>Competitive pay and benefits</li>
+            <li>Make a difference in your community</li>
+          </ul>
+          <p className="text-gray-600 text-center mb-4">
+            We’re always looking for talented and motivated individuals to join our stores and support team. If you’re passionate about technology and customer service, fill out our application form below – we’d love to hear from you!
+          </p>
+        </div>
+        <div className="max-w-2xl mx-auto">
+          <p className="text-center text-gray-600 mb-8">Apply to join our team! Please fill out the form below.</p>
+          <form className="bg-white rounded-2xl shadow-lg p-4 sm:p-8 flex flex-col gap-6 border border-gray-200 w-full" onSubmit={handleSubmit}>
+            <div className="flex flex-col md:flex-row gap-4">
+              <input
+                type="text"
+                name="firstName"
+                placeholder="First Name *"
+                className="flex-1 px-5 py-3 border border-gray-300 rounded-xl focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400"
+                value={form.firstName}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last Name *"
+                className="flex-1 px-5 py-3 border border-gray-300 rounded-xl focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400"
+                value={form.lastName}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email *"
+              className="px-5 py-3 border border-gray-300 rounded-xl focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400"
+              value={form.email}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              inputMode="numeric"
+              pattern="[0-9]*"
+              placeholder="Contact Number *"
+              className="px-5 py-3 border border-gray-300 rounded-xl focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400"
+              value={form.phone}
+              onChange={e => {
+                const val = e.target.value.replace(/[^0-9]/g, "");
+                handleChange({ target: { name: "phone", value: val } });
+              }}
+              minLength={7}
+              maxLength={15}
+            />
+            <input
+              type="text"
+              name="position"
+              placeholder="Position Applying For *"
+              className="px-5 py-3 border border-gray-300 rounded-xl focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400"
+              value={form.position}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              name="experience"
+              placeholder="Briefly describe your relevant experience *"
+              className="px-5 py-3 border border-gray-300 rounded-xl min-h-[80px] max-h-[200px] focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400 resize-vertical"
+              value={form.experience}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              name="coverLetter"
+              placeholder="Cover Letter (optional)"
+              className="px-5 py-3 border border-gray-300 rounded-xl min-h-[80px] max-h-[200px] focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400 resize-vertical"
+              value={form.coverLetter}
+              onChange={handleChange}
+            />
+            <textarea
+              name="whyGFH"
+              placeholder="Why do you want to work at GFH Telecom? *"
+              className="px-5 py-3 border border-gray-300 rounded-xl min-h-[80px] max-h-[200px] focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400 resize-vertical"
+              value={form.whyGFH}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="url"
+              name="resume"
+              placeholder="Link to Resume (Google Drive, Dropbox, etc.) *"
+              className="px-5 py-3 border border-gray-300 rounded-xl focus:border-[#0057D9] focus:ring-2 focus:ring-[#EAF4FF] transition placeholder-gray-400"
+              value={form.resume}
+              onChange={handleChange}
+              required
+            />
+            {error && <div className="text-red-600 text-center font-semibold mt-2">{error}</div>}
+            {success && <div className="text-green-600 text-center font-semibold mt-2">Application submitted successfully!</div>}
+            <button type="submit" className="px-8 py-3 bg-[#ff8200] text-white rounded-full font-semibold shadow hover:bg-orange-600 transition text-lg" disabled={submitting}>
+              {submitting ? "Submitting..." : "Submit Application"}
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );

@@ -28,9 +28,9 @@ export default function Footer() {
         <div>
           <div className="font-bold mb-2">Contact Info</div>
           <ul className="space-y-1">
-            <li>📞 (555) 123-4567</li>
-            <li>✉️ info@gfhtelecom.com</li>
-            <li>🏢 Silicon Valley, CA</li>
+            <li>📞 (832) 897 7201 </li>
+            <li>✉️ hr@gfhtelecom.com</li>
+            <li>🏢 Houston, TX</li>
           </ul>
         </div>
       </div>
@@ -38,3 +38,4 @@ export default function Footer() {
     </footer>
   );
 }
+

@@ -14,7 +14,7 @@ export default function Footer() {
             <li><a href="/about">About</a></li>
                         <li><a href="/careers">Careers</a></li>
             <li><a href="/contact">Contact</a></li>
-                        <li><a href="/landlord-portal">Lanlord Portal</a></li>
+                        <li><a href="/landlord-portal">Landlord Portal</a></li>
 
           </ul>
         </div>
@@ -40,4 +40,5 @@ export default function Footer() {
     </footer>
   );
 }
+
 
